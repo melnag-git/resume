@@ -14,6 +14,43 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Hero background image styling (bg.png) */
+      .hero {
+        position: relative;
+        background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/bg.png') no-repeat center center/cover;
+        color: #ffffff;
+      }
+      .hero .hero-title,
+      .hero .hero-subtitle {
+        color: #ffffff;
+      }
+      /* Fixed name text color visibility */
+      .hero-name {
+        color: #00d2ff;
+      }
+      /* Resume Section with Full Image Preview and Button Below */
+      .resume-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+      }
+      .resume-full-preview {
+        width: 100%;
+        max-width: 600px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        overflow: hidden;
+      }
+      .resume-full-preview img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <header class="hero">
@@ -23,8 +60,7 @@
             Hi, I'm <span class="hero-name">Melissa Nagrampa</span>!
           </h1>
           <p class="hero-subtitle">
-            I am an Information Technology student with interests in web/mobile
-            development, media, and creating digital solutions.
+            Information Technology graduate specializing in backend development, web technologies, process digitization, and choral leadership.
           </p>
 
           <div class="hero-buttons">
@@ -36,7 +72,7 @@
         <div class="hero-right">
           <div class="photo-wrapper">
             <img
-              src="assets/Self.jpg"
+              src="assets/Self.jpeg"
               alt="Photo of Melissa Mae G. Nagrampa"
             />
           </div>
@@ -51,43 +87,37 @@
             <h2>About Me</h2>
 
             <p>
-            I am a fourth-year Information Technology student with five years of
-            programming experience, specializing in backend development and in
-            building practical systems for real-world organizations such as choirs,
-            schools, and small businesses.
+            I am an Information Technology graduate from Ateneo de Naga University with a strong background in backend development, system troubleshooting, and digital process optimization.
             </p>
 
             <p>
-            Currently, I also work at my family business, which has given me some
-            work experience during my college life and inspired me to find IT solutions 
-            to modernize traditional workloads.
+            My experience spans professional cloud development internships, administrative and technical support roles in hospitality and enterprise management, and multi-year leadership in competitive choral institutions.
             </p>
 
-            <p><strong>My future?</strong></p>
+            <p><strong>My Vision?</strong></p>
 
             <p>
-            I want to collaborate with a team on innovative projects in website or
-            mobile development, with aspirations to start a company later on in my
-            career. I believe technology can enhance the way we live, not define it.
+            I aim to build high-impact digital solutions that streamline workflows, bridge technical systems with real-world needs, and contribute to innovative web and software engineering teams.
             </p>
         </div>
         </section>
 
-
       <!-- SKILLS SECTION -->
       <section id="skills" class="section section-alt">
         <div class="section-inner">
-          <h2>Skills</h2>
+          <h2>Skills & Technologies</h2>
           <div class="skills-grid">
             <span class="chip">HTML / CSS</span>
             <span class="chip">JavaScript</span>
-            <span class="chip">React / React Native</span>
-            <span class="chip">Networking Basics</span>
-            <span class="chip">System Administration</span>
-            <span class="chip">Troubleshooting and Debugging</span>
-            <span class="chip">Management / Organizational Skills</span>
-            <span class="chip">Documentation and Reports</span>
-            <span class="chip">Photo / Video Editing</span>
+            <span class="chip">React / Next.js</span>
+            <span class="chip">Ruby on Rails</span>
+            <span class="chip">C++</span>
+            <span class="chip">Firebase / Vercel</span>
+            <span class="chip">Score Engraving & Transcription</span>
+            <span class="chip">Process Digitization & Automation</span>
+            <span class="chip">Technical Support & Troubleshooting</span>
+            <span class="chip">Administrative Operations</span>
+            <span class="chip">Digital Media & Content Creation</span>
           </div>
         </div>
       </section>
@@ -96,6 +126,96 @@
       <section id="experience" class="section">
         <div class="section-inner">
           <h2>Experience & Projects</h2>
+
+      <!-- BCYC Official Website (First Project - Prioritized) -->
+      <article class="card">
+        <div class="card-header">
+          <h3>Baao Children & Youth Choir Official Website</h3>
+          <span class="card-date-pill">Present</span>
+        </div>
+
+        <p class="card-meta">
+          <span class="meta-role">Lead Web Developer</span>
+          <span class="meta-dot">•</span>
+          <span class="meta-tech">React · Next.js</span>
+        </p>
+
+        <ul class="card-points">
+          <li>Designed and developed the official BCYC web application dedicated to streaming and streamlining member documentation, choir history, event information, contact/inquiries, and donations.</li>
+          <li>Optimized digital accessibility for global audiences and supporters, enhancing organizational outreach and community engagement.</li>
+        </ul>
+
+        <div class="card-links">
+          <a
+            href="https://bcycphilippines.vercel.app"
+            target="_blank"
+            rel="noopener"
+            class="card-link"
+          >
+            View Website
+          </a>
+
+          <button
+            type="button"
+            class="card-link card-link-toggle"
+            data-target="bcyc-screens"
+          >
+            Show Screenshots
+          </button>
+        </div>
+
+        <div class="project-screenshots" id="bcyc-screens" hidden>
+          <div class="project-screenshots-inner">
+            <figure class="project-shot">
+              <img src="assets/bcyc1.png" alt="BCYC Website" />
+              <figcaption>BCYC Web Portal – Home Page.</figcaption>
+            </figure>
+            <figure class="project-shot">
+              <img src="assets/bcyc2.png" alt="BCYC Mobile App" />
+              <figcaption>BCYC Web Portal – History</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- VocalTrack -->
+      <article class="card">
+        <div class="card-header">
+          <h3>VocalTrack – Gamified Vocalization Application</h3>
+          <span class="card-date-pill">2026</span>
+        </div>
+
+        <p class="card-meta">
+          <span class="meta-role">Capstone / Research Project · Lead Developer</span>
+          <span class="meta-dot">•</span>
+          <span class="meta-tech">React · Next.js · Audio Processing</span>
+        </p>
+
+        <ul class="card-points">
+          <li>Designed a gamified vocalization application designed to assist singers with pitch accuracy and vocal exercises.</li>
+          <li>Engineered interactive feedback workflows to track vocal performance metrics and practice progress.</li>
+          <li>Achieved 4th Place recognition in IT Batch 2026 for research and software implementation.</li>
+        </ul>
+
+        <div class="card-links">
+          <button
+            type="button"
+            class="card-link card-link-toggle"
+            data-target="vocaltrack-screens"
+          >
+            Show Screenshots
+          </button>
+        </div>
+
+        <div class="project-screenshots" id="vocaltrack-screens" hidden>
+          <div class="project-screenshots-inner">
+            <figure class="project-shot project-shot-mobile">
+              <img src="assets/vocaltrack1.png" alt="VocalTrack portal" />
+              <figcaption>VocalTrack – Main Interface.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
 
       <!-- BucalTrack -->
       <article class="card">
@@ -111,21 +231,12 @@
         </p>
 
         <ul class="card-points">
-          <li>Built a web and mobile portal with acccompanying mobile scanner application for the Bicol Universities and Colleges Athletic League (BUCAL).</li>
+          <li>Built a web and mobile portal with accompanying mobile scanner application for the Bicol Universities and Colleges Athletic League (BUCAL).</li>
           <li>Implemented QR-based tickets, team registration, and real-time validation for staff and attendees.</li>
           <li>Designed backend workflows in Firebase for tracking teams, players, and ticket usage per season.</li>
         </ul>
 
         <div class="card-links">
-          <a
-            href="https://bucaltrack.org"
-            target="_blank"
-            rel="noopener"
-            class="card-link"
-          >
-            View Website
-          </a>
-
           <button
             type="button"
             class="card-link card-link-toggle"
@@ -135,7 +246,7 @@
           </button>
         </div>
 
-          <div class="project-screenshots" id="bucaltrack-screens">
+          <div class="project-screenshots" id="bucaltrack-screens" hidden>
             <div class="project-screenshots-inner">
               <figure class="project-shot">
                 <img src="assets/bucaltrack1.png" alt="BucalTrack web portal" />
@@ -188,7 +299,7 @@
             </button>
           </div>
 
-          <div class="project-screenshots" id="inventori-screens">
+          <div class="project-screenshots" id="inventori-screens" hidden>
             <div class="project-screenshots-inner">
               <figure class="project-shot">
                 <img src="assets/inventori1.png" alt="InvenTori Render" />
@@ -261,64 +372,6 @@
           </div>
         </article>
 
-        <!-- ADNU Freedom Wall Website -->
-        <article class="card">
-          <div class="card-header">
-            <h3>ADNU Freedom Wall Website</h3>
-            <span class="card-date-pill">Jun 2024 – Jul 2024</span>
-          </div>
-
-          <p class="card-meta">
-            <span class="meta-role">Academic Project · Frontend Developer</span>
-            <span class="meta-dot">•</span>
-            <span class="meta-tech">HTML / CSS · JavaScript · Firebase</span>
-          </p>
-
-          <ul class="card-points">
-            <li>Recreated the “ADNU Freedom Wall” Facebook page as a web forum using Firebase.</li>
-            <li>Implemented anonymous posting with support for comments and likes on each entry.</li>
-            <li>Project was awarded “Best Application” in the class.</li>
-          </ul>
-
-          <div class="card-links">
-            <a
-              href="https://nimp-company.web.app/index.html"
-              target="_blank"
-              rel="noopener"
-              class="card-link"
-            >
-              View Website
-            </a>
-
-            <button
-              type="button"
-              class="card-link card-link-toggle"
-              data-target="freedomwall-screens"
-            >
-              Show Screenshots
-            </button>
-          </div>
-
-          <!-- ADNU Freedom Wall screenshots: web only -->
-          <div class="project-screenshots" id="freedomwall-screens" hidden>
-            <figure class="project-shot">
-              <img
-                src="assets/adnufw1.png"
-                alt="ADNU Freedom Wall – Login"
-              />
-              <figcaption>ADNU FW - Login / Sign up.</figcaption>
-            </figure>
-
-            <figure class="project-shot">
-              <img
-                src="assets/adnufw2.png"
-                alt="ADNU Freedom Wall – main feed of anonymous posts"
-              />
-              <figcaption>ADNU FW - Main Feed for anonymous posts.</figcaption>
-            </figure>
-          </div>
-        </article>
-
         </div>
       </section>
 
@@ -345,8 +398,7 @@
                 <span class="card-date-pill">November 2022</span>
             </div>
             <p>
-              During the Literature and Language Studies (LLS) Festival 2023, I participated in the 
-              Impromptu speaking contest coming in second place out of six students of various programs.
+              Participated and secured 9th place in the Ateneo Programming Competition Freshman Edition.
             </p>
           </article>
 
@@ -372,11 +424,11 @@
           <article class="edu-item">
             <div class="card-header">
                 <h3>Bachelor of Science in Information Technology</h3>
-                <span class="card-date-pill">2022 – Present</span>
+                <span class="card-date-pill">Aug 2022 – May 2026</span>
             </div>
-            <p class="card-meta">Ateneo de Naga University</p>
+            <p class="card-meta">Ateneo de Naga University • Naga, Camarines Sur</p>
             <p>
-              Ongoing studies with coursework in programming, networking,
+              Completed degree requirements with coursework in programming, networking,
               databases, systems administration, and technopreneurship.
             </p>
           </article>
@@ -384,7 +436,7 @@
           <article class="edu-item">
             <div class="card-header">
                 <h3>TVL Strand - ICT Computer Programming</h3>
-                <span class="card-date-pill">2020 - 2022</span>
+                <span class="card-date-pill">2020 – 2022</span>
             </div>
             <p class="card-meta">University of Nueva Caceres</p>
             <p>
@@ -395,63 +447,34 @@
         </div>
       </section>
 
-      <!-- RESUME SECTION -->
+      <!-- RESUME SECTION (Full Image Preview + Button Below) -->
       <section id="resume" class="section">
         <div class="section-inner">
-          <!-- Section title stays on the top-left like the others -->
           <h2>Resume</h2>
 
-          <!-- Layout for image + cards -->
-          <div class="resume-section">
-            <!-- Left: preview image -->
-            <div class="resume-preview">
+          <div class="resume-container">
+            <div class="resume-full-preview">
               <img
-                src="assets/CV.png"
-                alt="Preview of my paper resume"
-                class="resume-image"
+                src="assets/CV.jpg"
+                alt="Full preview of my paper resume"
               />
             </div>
-
-            <!-- Right: description + links -->
-            <div class="resume-content">
-              <p class="resume-intro">
-                You can view my full paper resume or watch a short video resume that
-                introduces who I am, my experience, and my goals.
-              </p>
-
-            <div class="resume-links">
-              <article class="resume-link-card">
-                <h3>Paper Resume</h3>
-                <p>PDF version of my current resume.</p>
-                <a
-                  href="https://drive.google.com/file/d/1f0lr6y5If8TPEmyuIZzDybUhsPNhS06X/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener"
-                  class="card-link"
-                >
-                  Open Paper Resume
-                </a>
-              </article>
-
-              <article class="resume-link-card">
-                <h3>Video Resume</h3>
-                <p>Short video introduction about my background and projects.</p>
-                <a
-                  href="https://youtu.be/4WxdKzVfONU?si=pemJxlFR4mfhHh0l"
-                  target="_blank"
-                  rel="noopener"
-                  class="card-link"
-                >
-                  Watch Video Resume
-                </a>
-              </article>
+            <div>
+              <a
+                href="https://drive.google.com/file/d/1Sw8BjptYjUPLT2UCDk-EHy6MSCK_L1Zr/view?usp=sharing"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary"
+              >
+                Open Full Document
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- CONTACT SECTION -->
-      <section id="contact" class="section">
+      <section id="contact" class="section section-alt">
         <div class="section-inner">
           <h2>Contact Me</h2>
           <p>
@@ -459,13 +482,12 @@
             reach me through:
           </p>
           <ul class="contact-list">
-            <!-- TODO: Replace with your real links -->
             <li>
                 Number: +63 917 772 2468
             </li>
             <li>
               Email:
-              <a href="melissanagrampa2015@gmail.com"
+              <a href="mailto:melissanagrampa2015@gmail.com"
                 >melissanagrampa2015@gmail.com</a
               >
             </li>
